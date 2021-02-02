@@ -4,10 +4,10 @@ export class Workflow implements IWorkflow {
   name: string;
   apiVersion: string;
   constructor() {
-    this.name = "example2"
-    this.apiVersion = "v1"
+    this.name = "example2";
+    this.apiVersion = "v1";
   }
-  tasks = (): (ITask)[] => {
+  tasks = (): ITask[] => {
     return [
       {
         name: "step1",

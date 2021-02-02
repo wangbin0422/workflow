@@ -5,12 +5,12 @@ export class Workflow implements IWorkflow {
   apiVersion: string;
   private step6Num: number;
   constructor() {
-    this.name = "example1"
-    this.apiVersion = "v1"
+    this.name = "example1";
+    this.apiVersion = "v1";
 
     this.step6Num = 0;
   }
-  tasks = (): (ITask)[] => {
+  tasks = (): ITask[] => {
     return [
       {
         name: "step1",

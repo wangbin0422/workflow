@@ -19,11 +19,11 @@ function main() {
   w.tasks().forEach((task: ITask) => {
     if (task.fif !== undefined || task.bif != undefined) {
       if ((task.fif !== undefined && task.fif()) || (task.bif !== undefined && task.bif)) {
-        task.func(dataFlow, task.input(dataFlow));
+        task.func(dataFlow);
       } else if (task.else != undefined) {
-        task.else();
+        task.else(dataFlow);
       } else {
-        task.func();
+        task.func(dataFlow);
       }
     } else if (task.repeat !== undefined) {
       for (let i = 0; i < task.repeat; i++) {
